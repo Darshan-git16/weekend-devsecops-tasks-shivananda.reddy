@@ -1,0 +1,15 @@
+//scriptend pipeline code for creting file and folders
+
+node {
+   stage ("1.first stage create folder") {
+     echo "executing scriptend pipline code for folder and file"
+     sh "mkdir -p scriptend-folder"
+     echo "create file inside the folder"
+     sh "touch scriptend-folder/scrt-file.txt"
+   }
+stage ("2.add data to the file") {
+    echo "update some content to the  file"
+    writefile file:"scriptend-folder/scrpt-file.txt",text:"we are writing scripted"
+    echo "update some content to the file >>test.txt
+    sh "ls"
+    sh "ls-alrts"
